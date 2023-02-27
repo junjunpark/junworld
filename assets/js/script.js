@@ -215,12 +215,12 @@ var UI = {
                 if (isChecked) {
                     $('html').attr({'data-theme': 'dark'});
                     $mode.addClass('on');
-                    $logo.css({'background':'url("../assets/img/jlogo-w.svg") center no-repeat'});
+                    //$logo.css({'background':'url("../assets/img/jlogo-w.svg") center no-repeat'});
                     body.addClass('dark');
                 } else {
                     $('html').attr({'data-theme': 'light'});
                     $mode.removeClass('on');
-                    $logo.css({'background':'url("../assets/img/jlogo.svg") center no-repeat'});
+                    //$logo.css({'background':'url("../assets/img/jlogo.svg") center no-repeat'});
                     body.removeClass('dark');
                 }
             });
