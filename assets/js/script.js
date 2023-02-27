@@ -82,7 +82,7 @@ var UI = {
         scrollEvent: function(){
             
             $(window).on('scroll', function() {
-                $('.sec01-tbox').addClass('is-active')
+                
                 const scTop = $(this).scrollTop();
 
                 // 헤더고정
