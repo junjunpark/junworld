@@ -184,6 +184,10 @@ img {
   z-index: 99999;
 }
 
+.dark .header .logo a {
+  background: url("../img/jlogo_w.svg") center no-repeat;
+}
+
 .header .nav {
   position: relative;
 }
