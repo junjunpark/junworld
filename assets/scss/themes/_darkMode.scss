@@ -1,0 +1,79 @@
+@charset "uft-8";
+
+@use '../abstracts' as ab;
+
+@media (prefers-color-scheme: dark) {
+body {
+  background: #1b1c1c;
+  color: #e0e0e0;
+}
+.header {
+  background: #1b1c1c;
+}
+.header .nav .nav-toggle-btn {
+  background: #1b1c1c;
+  &::before {background: #fff;}
+  &::after {background: #fff;}
+}
+.header .logo a {
+  background: url("../img/jlogo-w.svg") center no-repeat;
+  // background-color: #fff;
+  // mask-image: url("../img/jlogo.svg");
+  // mask-repeat: no-repeat;
+  // mask-position: center;
+  // mask-size: contain;
+}
+.header .nav ul {
+  background: #303030;
+  li a {
+    color: #f2f2f2;
+  }
+  
+}
+.section .title {
+  color: #fff;
+}
+.sec02 .profile .profile-title {
+  color: #fff;
+}
+.sec02 .tag-list-wrap .tag-list li {
+  background: #303030;
+  color: #e0e0e0;
+}
+.sec02 .about-box .sec-title {
+  color: #fff;
+}
+
+.sec03 {
+  background: #1a1a1a;
+}
+
+.sec03 .tab-wrap .tab-cont-list .tab-cont {
+  background: #1b1c1c;
+}
+
+.sec03 .tab-wrap .tab-cont-list .tab-cont .cont-desc .site-name {
+  color: #fff;
+}
+.sec03 .tab-wrap .tab-cont-list .tab-cont .cont-img {
+  border: 1px solid #303030;
+}
+.sec03 .tab-wrap .tab-cont-list .tab-cont .cont-img a::after {
+  @include ab.bgblack(0.6);
+}
+.sec03 .tab-wrap .tab-cont-list .tab-cont .cont-desc ul li span {
+  color: #555;
+}
+.sec04 {
+  background: #1f2221;
+}
+.sec04 .sec-btitle {
+  color: #fff;
+}
+.sec04 .form-wrap {
+  @include ab.bgblack(0.2);
+}
+.sec04 .form-wrap input, .sec04 .form-wrap textarea {
+  background: #303030;
+}
+}
