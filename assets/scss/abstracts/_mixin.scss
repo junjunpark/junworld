@@ -1,0 +1,57 @@
+@charset "uft-8";
+
+/* 마진 */
+@mixin mt($marT) {
+    margin-top: $marT ;
+} 
+@mixin mb($marB) {
+    margin-bottom: $marB ;
+} 
+@mixin ml($marL) {
+    margin-left: $marL ;
+} 
+@mixin mr($marR) {
+    margin-right: $marR ;
+} 
+
+@mixin pdtb($pdtb) {
+    padding: $pdtb 0;
+} 
+
+
+@mixin bg($name, $path:"/assets/img/",$format:"png",$vert,$hori){
+    background: url("#{$path}#{$name}.#{$format}") $vert $hori no-repeat;
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+} 
+
+@mixin trans($secend) {
+    transition:all $secend;
+}
+
+@mixin tranfrot($deg) {
+    transform:rotate($deg);
+}
+
+@mixin tranflate50() {
+    transform: translate(-50%, -50%);
+}
+
+@mixin offeffect {
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+@mixin oneffect {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+// @function color($color-name) {
+//     @return var(--data-color-#{$color-name});
+//   }
+
+//   background-color: color(primary);

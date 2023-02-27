@@ -1,16 +1,602 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HYEJUN PORTFOLIO</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="portfolio/assets/css/sub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
+    <div id="skip" class="skip">
+        <a href="#header">헤더바로가기</a>
+        <a href="#container">본문바로가기</a>
+    </div>
+    <!-- [s] header -->
+    <header id="header" class="header">    
+        <div class="inner">
+            <h1 id="logo" class="logo">
+                <a href="/">Jun Portfolio</a>
+            </h1>
+            <nav class="nav">
+                <ul class="gnb">
+                    <li class="on"><a href="">HOME</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <button class="nav-toggle-btn"></button>
+                <div class="mode">
+                    <label for="mode-toggle"></label>
+                    <input type="checkbox" id="mode-toggle">
+                    <div class="sun" id="sun">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                        <div class="line4"></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- // [e] header -->
+    <div id="container" class="container">
+        <!-- [s] wrapper -->
+        <div id="wrapper" class="wrapper">
 
-    <h1>hello</h1>
+            <!-- [s] main  -->
+            <main>
+                <section class="section sec01">
+                    <div class="inner">
+                        <div class="col-2">
+                            <div class="col"></div>
+                            <div class="col sec01-tbox">
+                                <h2 class="sec01-title">I design <span></span>for the websites</h2>
+                                <p>Hi, there! I’me Web publisher Hyejun Park.<br>
+                                    I enjoy starting new projects.<br>
+                                    Wanna see my work? Let's go!</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section sec02">
+                    <div class="inner">
+                        <h3 class="title">ABOUT ME</h3>
+                        <div class="about-area scEvt">
+                            <div class="profile col-2">
+                                <div class="col profile-img">
+                                    <img src="./assets/img/profile.png" alt="profile img">
+                                </div>
+                                <div class="col profile-box">
+                                    <div class="profile-title">
+                                        안녕하세요!<em>😀</em><br>
+                                        <strong>성장</strong>을 위해 꾸준히 노력하는 웹퍼블리셔<em>🌱</em><br>
+                                        <strong>박혜준</strong>입니다.
+                                    </div>
+                                    <div class="tag-list-wrap">
+                                        <ul class="tag-list">
+                                            <li>#웹퍼블리셔</li>
+                                            <li>#HTML</li>
+                                            <li>#CSS</li>
+                                            <li>#JQuery</li>
+                                            <li>#Javascript</li>
+                                            <li>#웹표준</li>
+                                            <li>#Git</li>
+                                            <li>#Jira</li>
+                                            <li>#Zeplin</li>
+                                            <li>#Adobe XD</li>
+                                            <li>#Adobe Photoshop</li>
+                                        </ul>
+                                    </div>
+                                    <a href="http://hyejun12047.dothome.co.kr/doc/hjp_2023.pdf" class="btn link-btn" target="_blank">이력서 바로가기</a>
+                                </div>
+                            </div>
+                            <div class="about-box scEvt">
+                                <h4 class="sec-title">SKILL</h4>
+                                <div class="col-2">
+                                    <div class="col">
+                                        <p class="sec-stitle co-point">HTML, CSS</p>
+                                        <ul class="list-dot">
+                                            <li>웹 표준을 준수합니다.</li>
+                                            <li>반응형 레이아웃을 제작할 수 있습니다.</li>
+                                            <li>keyframe을 활용한 애니메이션 기법을 사용할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <p class="sec-stitle co-point">Jquery, Javascript</p>
+                                        <ul class="list-dot">
+                                            <li>제이쿼리를 활용하여 구현할 수있습니다.</li>
+                                            <li>JS 라이브러리에 대해 이해하고 활용할 수 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <p class="sec-stitle co-point">Design</p>
+                                        <ul class="list-dot">
+                                            <li>디자인에 대한 경험이 있어 디자인에 대한 기획 의도를 이해할 수 있습니다.</li>   
+                                            <li>디자인툴(Photoshop, Zeplin, Adobe XD)에 대한 경험이 있습니다.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col">
+                                        <p class="sec-stitle co-point">Co-work</p>
+                                        <ul class="list-dot">
+                                            <li>협업툴(Git, Jira) 사용경험이 있습니다.</li>
+                                            <li>원활한 협업을 위해 지식을 배우고 함께 좋은 결과물을 만들고자 노력합니다.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-box">
+                                <div class="col-2">
+                                    <div class="col scEvt scDelay03">
+                                        <h4 class="sec-title">EXPERIENCE</h4>
+                                        <ul class="list-dot">
+                                            <li>고려 사이버 대학교 디자인 공학과</li>
+                                            <li>웹에이전시 근무 경험</li>
+                                            <li>사이트 구축, 운영, 유지보수 업무수행</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col scEvt scDelay05">
+                                        <h4 class="sec-title">LICENSE</h4>
+                                        <ul class="list-dot">
+                                            <li>웹디자인 기능사</li>
+                                            <li>컴퓨터그래픽스 기능사</li>
+                                            <li>GTQ 포토샵 1급</li>
+                                            <li>GTQ 일러스트 1급</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section sec03">
+                    <div class="inner">
+                        <h3 class="title">WORK</h3>
+                        <div class="tab-wrap">
+                            <div class="tab-btn-list">
+                                <a href="javascript:void(0)" class="tab-btn" data-filter="*">전체</a>
+                                <a href="javascript:void(0)" class="tab-btn" data-filter="cate1">반응형</a>
+                                <a href="javascript:void(0)" class="tab-btn" data-filter="cate2">웹·모바일</a>
+                            </div>
+                            <div class="tab-cont-list scEvt">
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="https://www.lottecard.co.kr/" target="_blank">
+                                                <img src="./assets/img/work/work0.png" alt="롯데카드 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">롯데카드 퍼블리싱 운영</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2021.06 ~ 2022.12</li>
+                                                <li><span>work</span> 웹·모바일 운영, 앱 내 신규 컨텐츠 구축</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">    
+                                    <div class="cont-area">         
+                                        <div class="cont-img">
+                                            <a href="http://www.fineofloors.com/" target="_blank">
+                                                <img src="./assets/img/work/work1.jpg" alt="FINEO 썸네일">		
+                                            </a>				
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">FINEO</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2021.01</li>
+                                                <li><span>work</span> 다국어, 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>    
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">    
+                                        <div class="cont-img">
+                                            <a href="http://coweko.kr/" target="_blank">
+                                                <img src="./assets/img/work/work2.png" alt="한국만회웹툰학회 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">한국만회웹툰학회</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2021.01</li>
+                                                <li><span>work</span> 다국어, 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area"> 
+                                        <div class="cont-img">
+                                            <a href="https://clael.co.kr/" target="_blank">
+                                                <img src="./assets/img/work/work3.png" alt="클라엘 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">클라엘</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.10 ~ 2020.12</li>
+                                                <li><span>work</span> 쇼핑몰, 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.elumisoft.com/" target="_blank">
+                                                <img src="./assets/img/work/work4.jpg" alt="이루미소프트 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">이루미소프트</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.09</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="javascript:void(0);" class="nocursor">
+                                                <img src="./assets/img/work/work5.jpg" alt="국민대학교 건축대학 썸네일">			
+                                            </a>			
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">2020국민대학교 건축대학 졸업작품 전시회</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.07</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="javascript:void(0);" class="nocursor">
+                                                <img src="./assets/img/work/work20.jpg" alt="한국전통문화대학교 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">한국전통문화대학교 전통미술공예학과</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.06</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.redshoes.or.kr/" target="_blank">
+                                                <img src="./assets/img/work/work6.jpg" alt="빨간운동화 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">빨간운동화</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.03</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.dreamchef.kr/index" target="_blank">
+                                                <img src="./assets/img/work/work7.jpg" alt="드림셰프 썸네일">	
+                                            </a>				
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">드림셰프</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2020.01 ~ 2020.02</li>
+                                                <li><span>work</span> 다국어, 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.copya.com/" target="_blank">
+                                                <img src="./assets/img/work/work8.png" alt="카피아 썸네일">
+                                            </a>
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">카피아</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2019.12</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.iwomanlawyer.co.kr/" target="_blank">
+                                                <img src="./assets/img/work/work9.jpg" alt="이성숙법률사무소 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">이성숙법률사무소</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2019.11</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="https://sapyoung.com/" target="_blank">
+                                                <img src="./assets/img/work/work10.jpg" alt="사회평론 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">사회평론</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.07 ~ 2019.09</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="https://hallims.co.kr/" target="_blank">
+                                                <img src="./assets/img/work/work11.jpg" alt="한림기계 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">한림기계</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.05 ~ 2019.07</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="javascript:void(0);" class="nocursor">
+                                                <img src="./assets/img/work/work18.jpg" alt="삼척월드 비치 치어리딩 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">삼척월드 비치 치어리딩 오픈 마스터즈</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.05 ~ 2019.06</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="javascript:void(0);" class="nocursor">
+                                                <img src="./assets/img/work/work19.jpg" alt="오대리 썸네일">	
+                                            </a>					
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">오대리 물류대행</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.04 ~ 2019.06</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://paent.co.kr/" target="_blank">
+                                                <img src="./assets/img/work/work12.jpg" alt="프로젝트 어바웃 썸네일">	
+                                            </a>				
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">프로젝트 어바웃</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.04 ~ 2019.05</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="https://inv.hanseo.ac.kr/" target="_blank">
+                                                <img src="./assets/img/work/work13.png" alt="한서대학교 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">한서대학교 HS 혁신 지원사업</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2019.03 ~ 2019.04</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.hlbelec.com/" target="_blank">
+                                                <img src="./assets/img/work/work14.jpg" alt="에이치엘비일렉 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">에이치엘비일렉</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2019.02 ~ 2019.03</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="javascript:void(0);" class="nocursor">
+                                                <img src="./assets/img/work/work15.jpg" alt="세계로 국제어학원 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">세계로 국제어학원</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2019.02</li>
+                                                <li><span>work</span> 디자인 및 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate2">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://www.gagu824.com/" target="_blank">
+                                                <img src="./assets/img/work/work16.jpg" alt="디자인스페이스 썸네일">
+                                            </a>						
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">디자인스페이스</p>
+                                            <ul>
+                                                <li><span>type</span> 웹·모바일</li>
+                                                <li><span>date</span> 2019.01</li>
+                                                <li><span>work</span> 쇼핑몰, 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-cont" data-filter="cate1">
+                                    <div class="cont-area">
+                                        <div class="cont-img">
+                                            <a href="http://eroemoto.com/" target="_blank">
+                                            <img src="./assets/img/work/work17.jpg" alt="엘로이모토 썸네일">
+                                            </a>
+                                        </div>
+                                        <div class="cont-desc">
+                                            <p class="site-name">엘로이모토</p>
+                                            <ul>
+                                                <li><span>type</span> 반응형</li>
+                                                <li><span>date</span> 2018.12</li>
+                                                <li><span>work</span> 퍼블리싱</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section sec04">
+                    <div class="inner">
+                        <h3 class="title">CONTACT</h3>
+                        <div class="contact-area col-2">
+                                <div class="col contact-box">
+                                    <div class="sec-btitle">저에게 궁금한 점이 있으시다면<br>언제든지 연락주세요!</div>
+                                    <p class="text">Let's make something AWESOME TOGETER!</p>
+                                    <div class="contact-email">
+                                        <span id="copy-email" class="hidden">hyejun1207@gmail.com</span>
+                                        <button id="copy-email-btn" class="msg-popup-btn" onclick="copyToClipBoard()"><i class="fa-regular fa-envelope"></i> hyejun1207@gmail.com</button>
+                                        <div class="msg-popup-wrap" id="popup-wrap" style="display:none;" >
+                                            <div class="msg-popup">
+                                                <p> 🙆🏻‍♀️ 메일주소가 복사되었습니다!</p>
+                                                <a class="btn close-btn">확인</a>
+                                            </div>
+                                            <div class="dimmed"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-wrap scEvt">
+                                        <!-- START HERE -->
+                                        <!-- Style The Contact Form How Ever You Prefer -->
+                                        <form class="gform pure-form pure-form-stacked" method="POST" data-email="junjunpark08" target="iframe1" action="https://script.google.com/macros/s/AKfycbxqE7gW-4UKoHE6-rKieIkzwd3gyJ2V1BteU8c97zVGjJ9hGbpllshlmn_yRo83YTh9xw/exec">
+                                            <!-- change the form action to your script url -->
+                                            <div class="form-elements">
+                                                <fieldset class="pure-group">
+                                                    <label for="name"></label>
+                                                    <input id="name" name="name" placeholder="Name" required>
+                                                </fieldset>
+                                                <fieldset class="pure-group">
+                                                    <label for="email"></label>
+                                                    <input id="email" name="email" type="email" value="" required placeholder="Email">
+                                                    </fieldset>
+                                                <fieldset class="pure-group">
+                                                    <label for="message"></label>
+                                                    <textarea id="message" name="message" rows="10" placeholder="Message" required></textarea>
+                                                </fieldset>
+                                                <button class="button-success pure-button button-xlarge btn">전송</button>
+                                            </div>
+                                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                                            <div class="thankyou_message msg-popup-wrap" style="display:none;">
+                                                <div class="msg-popup">
+                                                    <p>감사합니다👍 확인 후 회신드리겠습니다!</p>
+                                                    <a class="btn msg-popup-btn">확인</a>
+                                                </div>
+                                                <div class="dimmed"></div>
+                                            </div>
+                                        </form>
+                                    <!-- END -->
+                                    </div>  
+                                </div>
+                                <div class="col">
+                                </div>
+                        </div>
+                    </div>
+                    <div class="contact-img"></div>
+                </section>
+            </main> 
+            <!-- // [e] main  -->
+            <footer id="footer" class="footer">
+                <div class="ft-cont">Designed & Built by HYEJUNPARK</div>
+                <div class="gotoTop">
+                    <a href="#" tabindex="0" id="gotop">TOP</a>
+                </div>
+            </footer>
+        </div>
+        <!-- // [e] wrapper -->
+    </div>
 
+
+
+
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+<script src="./assets/js/script.js"></script>
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
 </body>
 </html>

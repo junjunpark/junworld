@@ -1,0 +1,397 @@
+@charset "UTF-8";
+
+@use '../abstracts' as ab;
+
+:root,
+:root.light {
+    --bg-color: #{ab.$co-white};
+    --text-color: #{ab.$co-primary};
+    --basic-black : #{ab.$co-black};
+    --basic-gray1 : #{ab.$co-bggray1};
+    --basic-gray2 : #{ab.$co-bggray2};
+    --border-gray : #{ab.$co-bdgray};
+    --bg-green : #{ab.$co-bggreen};
+}
+
+[data-theme="dark"] {
+    --bg-color: #{ab.$dco-black};
+    --text-color: #{ab.$dco-primary};
+    --basic-black : #{ab.$co-white};
+    --basic-gray1 : #{ab.$co-black};
+    --basic-gray2 : #{ab.$dco-bg3};
+    --border-gray : #{ab.$co-black};
+    --bg-green : #{ab.$co-black};
+}
+
+
+/** common **/
+html {
+    overflow-y:auto
+}
+html,body { 
+    font-family: "Noto Sans KR", 'Malgun Gothic', 'Dotum', sans-serif;
+    min-width: 100%;
+    min-height:100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-break: keep-all;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    line-height: 1.6;
+    // background: ab.$co-white;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+div,ul,li,a,input,button,textarea {
+    box-sizing: border-box;
+}
+a { 
+    text-decoration: none;
+}
+img {
+    max-width:100%; 
+    vertical-align: top;
+} 
+
+/* accessibility */
+.skip {
+    position: fixed;
+    z-index: 999999;
+    a {
+        font-size: 16px;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        display: flex;
+        width: 100vw;
+        padding: 5px 0;
+        opacity: 0;
+        color: #fff;
+        background-color: #000;
+        justify-content: center;
+        &:focus {
+            top: 0;
+            opacity: 1;
+        }
+    }
+}
+
+[class*="inner"] {
+    width: 1200px;
+    margin: auto;
+}
+
+@media screen and (max-width:1339px) {
+    .inner {width: 92%;}
+}
+
+
+/* header*/ 
+.header {
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px 12px 4px rgb(0 0 0 / 4%); 
+    padding: 10px 0;
+    position: relative;
+    @include ab.trans(0.3s);
+    .logo a {
+        display: block;
+        width: 35px;
+        height: 40px;
+        font-size: 0;
+        color:transparent;
+        background: url("../img/jlogo.svg") center no-repeat;
+        // background-color: #1a1a1a;
+        // mask-image: url("../img/jlogo.svg");
+        // mask-repeat: no-repeat;
+        // mask-position: center;
+        // mask-size: contain;
+    }
+    .inner {
+        display:flex; 
+        justify-content:space-between; 
+        align-items:center;
+    }
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+}
+
+
+.header .nav {
+    position: relative;
+    ul {
+        display: flex;
+        background: var(--basic-gray1);
+        z-index: 9999;
+        @include ab.border-radius(50px);
+        @include ab.trans(0.5s);
+        width: 0;
+        overflow: hidden; 
+        margin-right: 60px;
+        li {
+            padding:5px; 
+            visibility: inherit;
+            a {
+                display: block;
+                color: var(--basic-black);
+                height: 40px; 
+                line-height: 40px;
+                padding: 0px 16px;
+                @include ab.border-radius(50px);
+                @include ab.trans(0.3s);
+                &:hover {
+                    background: ab.$co-point; 
+                    color: ab.$co-white;
+                }
+            }
+            &.on a {
+                background: ab.$co-point; 
+                color: ab.$co-white;
+            }
+        }
+    }
+}
+
+.header .nav .nav-toggle-btn {
+    position: absolute;
+    top: 0px; 
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    background: var(--bg-color);
+    z-index: 9999;
+    border: none;
+    &::before {
+        display: block;
+        width: 60%;
+        height: 2px;
+        background: var(--basic-black);
+        position: absolute;
+        left: 0;right: 0;
+        margin: auto;
+        top: 62%;
+        content:'';
+    }
+    &::after {
+        display: block;
+        width: 60%;
+        height: 2px;
+        background: var(--basic-black);
+        position: absolute;
+        left: 0;right: 0;
+        margin: auto;
+        top: 37%;
+        content:'';
+    }
+}
+
+.header .nav.active  {
+    ul {
+    width: auto;
+    overflow: inherit;
+    margin-right: 92px;
+    // background: ab.$co-bggray1;
+    padding: 0 5px;
+}
+    .nav-toggle-btn {
+        background: ab.$co-point ;
+        width: 40px;
+        height: 40px;
+        top: 5px;
+        right: 62px;
+        border: 0px solid ab.$co-point ;
+        @include ab.border-radius(50%);
+        &::before {
+            background: ab.$co-white;
+            width: 50%;
+            @include ab.tranfrot(45deg);
+            top: 50%;
+        }
+        &::after {
+            background: ab.$co-white; 
+            width: 50%;
+            @include ab.tranfrot(-45deg);
+            top: 50%;
+        }
+    }
+}
+
+.mode {
+    width: 40px; 
+    height: 40px;
+    background: ab.$co-btnmode;
+    position: absolute;
+    right: -10px; 
+    top: 50%;
+    @include ab.tranflate50;
+    @include ab.border-radius(5px);
+    @include ab.trans(0.5s);
+    overflow: hidden;
+    cursor:pointer;
+    input { display: none;}
+    .sun {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        background: ab.$co-white ;
+        @include ab.border-radius(50%);
+        @include ab.tranflate50;
+        z-index: 9;
+        > div {
+            height: 1px;
+            width: 0px;
+            @include ab.tranflate50;
+            background: ab.$co-white ;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 8;
+            transition: width 0.5s;
+        }
+        .line2 {
+            transform:translate(-50%,-50%) rotate(90deg);
+        }
+        .line3 {
+            transform:translate(-50%,-50%) rotate(45deg);
+        }
+        .line4 {
+            transform:translate(-50%,-50%) rotate(-45deg);
+        }
+        &::after {
+            content:'';
+                width: 16px;
+                height: 16px;
+                background: ab.$co-btnmode;
+                border-radius:50%;
+                position: absolute;
+                ;top:-5px;
+                right:-5px;
+                transition:all 0.5s;
+            }
+    }
+}
+
+.mode.on {
+    background: ab.$co-point;
+    .sun > div {
+        width: 24px;
+    }
+    .sun::after {
+        top: -20px;
+        right: -20px;
+        background: ab.$co-point;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    
+.header .nav.active {
+    width: 100%; 
+    height: 100%; 
+    //background: ab.$co-white;
+    position: fixed; 
+    left: 0;
+    top: 0;
+    z-index: 99999; 
+    justify-content: center;
+    display: flex;
+    padding: 0;
+    align-items:center; 
+    text-align:center;
+    flex-direction:column;
+    ul {
+        flex-direction:column;
+        margin-right: 0;
+        padding: 0;
+        background: transparent;
+        li {
+            a {
+                padding: 20px; 
+                font-size: ab.$font18;
+                height: auto; 
+                line-height: 1;
+                &:hover {
+                    background: transparent; 
+                    color: ab.$co-point;
+                }
+            }
+            &.on a {
+                background: transparent; 
+                color: ab.$co-point;
+            }
+        }
+    }
+    .nav-toggle-btn {
+        top: 20px;
+        right: 20px;
+    }
+    .mode {
+        position: relative;
+        margin-top: 20px;
+        top: 0;
+        right: 0;
+        transform: translate(0);
+    }
+    &::before {
+        content:'';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left:0;
+        top:0;
+        @include ab.bgwhite(0.6);
+        backdrop-filter: blur(20px);
+    }
+} 
+
+.dark .header .nav.active::before {
+    @include ab.bgblack(0.6);
+}
+}
+
+/* footer */ 
+.footer {
+    display:flex;
+    justify-content: center; 
+    position: relative; 
+    text-align: center; 
+    padding: 20px;
+    .ft-cont {
+        font-size: ab.$font12; 
+        color: #999;
+    }
+    .gotoTop {
+        position: fixed; 
+        width: 40px; 
+        height: 40px; 
+        bottom: 2%; 
+        right: 1%;
+        z-index: 99;
+        a {
+            display: inline-block; 
+            width: 100%; 
+            line-height: 40px; 
+            @include ab.border-radius(50%);
+            font-size: 10px;
+            @include ab.bgblack(0.6);
+            color: #fff; 
+            transition:all 0.3s;
+            &:hover { 
+                @include ab.bgblack(0.8);
+            }
+        }
+    }
+}
+
+

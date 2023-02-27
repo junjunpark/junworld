@@ -1,0 +1,41 @@
+@charset "uft-8";
+
+
+/* 컬러 */
+$co-white : #fff;
+$co-point : #21cda4;
+$co-black : #303030;
+$co-sblack : #555;
+$co-primary : #777;
+$co-bggray1 : #f2f2f2 ;
+$co-bggray2 : #f7f7f7 ;
+$co-bggray3 : #ececec ;
+$co-bggray4 : #e0e0e0 ;
+$co-bggreen : #def2ed;
+$co-bdgray : #eaeaea;
+$co-btngray : #686868;
+$co-btnmode : #0b3550;
+$dco-black : #1b1c1c;
+$dco-primary :#e0e0e0;
+$dco-bg3:#1a1a1a;
+
+
+/* 폰트 */
+$font12 : 0.85rem;
+$font14 : 1rem;
+$font16 : 1.142rem;
+$font18 : 1.28rem;
+$font24 : 1.71rem;
+$font30 : 2.14rem;
+$font40 : 2.85rem;
+$font60 : 4.28rem;
+
+
+@mixin bgwhite($bgwh) {
+    background: rgba(255,255,255,$bgwh);
+}
+
+@mixin bgblack($bgbk) {
+    background: rgba(0,0,0,$bgbk); 
+}
+
