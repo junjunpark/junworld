@@ -118,10 +118,12 @@
     
 
     60% {
+        -webkit-transform: translate(-10%);
         transform: translateY(-10%);
     }
     
     to {
+        -webkit-transform: translate(0%);
         transform: translateY(0%);
         opacity: 1;
     }
@@ -227,6 +229,7 @@
         @include ab.trans(0.3s);
         &:hover { 
             box-shadow: 4px 4px 12px 4px rgb(0 0 0 / 12%); 
+            -webkit-transform: translateY(-10px);
             transform:translateY(-10px);
         }
         &.on {display: block;}
@@ -250,7 +253,7 @@
                         backdrop-filter: blur(5px);
                         display: none;
                     }
-                    &:hover img {transform:scale(1.2);}
+                    &:hover img { -webkit-transform: scale(1.2);transform:scale(1.2);}
                     &:hover::after {
                         display: block;
                         @include ab.trans(0.2s);

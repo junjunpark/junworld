@@ -260,12 +260,15 @@ img {
             transition: width 0.5s;
         }
         .line2 {
+            -webkit-transform: translate(-50%,-50%) rotate(90deg);
             transform:translate(-50%,-50%) rotate(90deg);
         }
         .line3 {
+            -webkit-transform: translate(-50%,-50%) rotate(45deg);
             transform:translate(-50%,-50%) rotate(45deg);
         }
         .line4 {
+            -webkit-transform: translate(-50%,-50%) rotate(-45deg);
             transform:translate(-50%,-50%) rotate(-45deg);
         }
         &::after {
@@ -342,6 +345,7 @@ img {
         margin-top: 20px;
         top: 0;
         right: 0;
+        -webkit-transform:translate(0);
         transform: translate(0);
     }
     &::before {
