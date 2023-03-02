@@ -28,6 +28,7 @@
 } 
 
 @mixin trans($secend) {
+    -webkit-transition:all $secend;
     transition:all $secend;
 }
 
