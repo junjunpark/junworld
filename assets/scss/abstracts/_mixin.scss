@@ -32,19 +32,23 @@
 }
 
 @mixin tranfrot($deg) {
+    -webkit-transform:rotate($deg);
     transform:rotate($deg);
 }
 
 @mixin tranflate50() {
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 @mixin offeffect {
+    -webkit-transform: translateY(100px);
     transform: translateY(100px);
     opacity: 0;
 }
 
 @mixin oneffect {
+    -webkit-transform:translateY(0);
     transform: translateY(0);
     opacity: 1;
 }
