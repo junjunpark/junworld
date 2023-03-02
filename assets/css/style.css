@@ -817,7 +817,7 @@ img {
 }
 .sec03 .tab-wrap .tab-cont-list .tab-cont .cont-area .cont-desc .site-name {
   font-size: 1.28rem;
-  color: var(--text-color);
+  color: var(--basic-black);
   font-weight: 500;
 }
 .sec03 .tab-wrap .tab-cont-list .tab-cont .cont-area .cont-desc ul {
