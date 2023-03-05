@@ -86,10 +86,10 @@
         // @include ab.offeffect;
         line-height: 1.2;
         span {display: block }
-        transition: transform 0.7s ease-out 0.2s,opacity 0.7s ease-out 0.2s;
-        animation-name: main-title;
+        // transition: transform 0.7s ease-out 0.2s,opacity 0.7s ease-out 0.2s;
+        animation-name: maintitle;
         animation-duration: 0.5s;
-        animation-delay: 0.2s;
+        animation-delay: 0.5s;
         animation-iteration-count: 1;
         animation-timing-function: linear;
         animation-direction: alternate;
@@ -97,34 +97,31 @@
     p {
         color: ab.$co-white;
         @include ab.mt(20px);
-        @include ab.trans(0.5s);
-        // @include ab.offeffect;
+        // @include ab.trans(0.5s);
+        transition-delay: 0.5s;
+        //@include ab.offeffect;
     }
     &.is-active .sec01-title{
-        @include ab.oneffect;
+        // @include ab.oneffect;
     }
     &.is-active p {
-        @include ab.oneffect;
-        transition-delay: 0.3s;
+        // @include ab.oneffect;
     }
 }
 
 
 
-@keyframes main-title {
-	from {
+@keyframes maintitle {
+
+    from {
+        -webkit-transform: translate(100px);
+        transform: translateY(100px);
         opacity: 0;
     }
     
-
-    60% {
-        -webkit-transform: translate(-10%);
-        transform: translateY(-10%);
-    }
-    
     to {
-        -webkit-transform: translate(0%);
-        transform: translateY(0%);
+        -webkit-transform: translate(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -372,7 +369,7 @@
     @include ab.bgblack(0.2);
 }
 
-/* 팝업레이어 */ 
+/* popup */ 
 .msg-popup-wrap {
     position: fixed; 
     left: 0;
@@ -410,7 +407,7 @@
     }
 } 
 
-/* effec */ 
+/* effect */ 
 .scEvt {
     @include ab.trans(0.5s);
     @include ab.offeffect;
