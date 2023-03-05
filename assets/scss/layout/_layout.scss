@@ -100,6 +100,12 @@
         // @include ab.trans(0.5s);
         transition-delay: 0.5s;
         //@include ab.offeffect;
+        animation-name: maintitle;
+        animation-duration: 0.5s;
+        animation-delay: 0.8s;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        animation-direction: alternate;
     }
     &.is-active .sec01-title{
         // @include ab.oneffect;
@@ -376,7 +382,7 @@
     top: 0; 
     width: 100%; 
     height: 100%; 
-    z-index: 999; 
+    z-index: 9999; 
     &.popView {display: block;}
     .msg-popup {
         position: absolute; 
