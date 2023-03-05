@@ -2,9 +2,6 @@
 /* font */
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
-/* 마진 */
-/* 컬러 */
-/* 폰트 */
 /* reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -94,6 +91,7 @@ html, body {
   line-height: 1.6;
   background-color: var(--bg-color);
   color: var(--text-color);
+  position: relative;
 }
 
 div, ul, li, a, input, button, textarea {
@@ -583,16 +581,12 @@ img {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   line-height: 1.2;
-  -webkit-transition: opacity 0.7s ease-out 0.2s, -webkit-transform 0.7s ease-out 0.2s;
-  transition: opacity 0.7s ease-out 0.2s, -webkit-transform 0.7s ease-out 0.2s;
-  transition: transform 0.7s ease-out 0.2s, opacity 0.7s ease-out 0.2s;
-  transition: transform 0.7s ease-out 0.2s, opacity 0.7s ease-out 0.2s, -webkit-transform 0.7s ease-out 0.2s;
-  -webkit-animation-name: main-title;
-          animation-name: main-title;
+  -webkit-animation-name: maintitle;
+          animation-name: maintitle;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
   -webkit-animation-timing-function: linear;
@@ -606,48 +600,30 @@ img {
 .sec01 .sec01-tbox p {
   color: #fff;
   margin-top: 20px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
-.sec01 .sec01-tbox.is-active .sec01-title {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-}
-.sec01 .sec01-tbox.is-active p {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-  opacity: 1;
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-@-webkit-keyframes main-title {
+@-webkit-keyframes maintitle {
   from {
+    -webkit-transform: translate(100px);
+    transform: translateY(100px);
     opacity: 0;
   }
-  60% {
-    -webkit-transform: translate(-10%);
-    transform: translateY(-10%);
-  }
   to {
-    -webkit-transform: translate(0%);
-    transform: translateY(0%);
+    -webkit-transform: translate(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-
-@keyframes main-title {
+@keyframes maintitle {
   from {
+    -webkit-transform: translate(100px);
+    transform: translateY(100px);
     opacity: 0;
   }
-  60% {
-    -webkit-transform: translate(-10%);
-    transform: translateY(-10%);
-  }
   to {
-    -webkit-transform: translate(0%);
-    transform: translateY(0%);
+    -webkit-transform: translate(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -940,7 +916,7 @@ img {
   background: rgba(0, 0, 0, 0.2);
 }
 
-/* 팝업레이어 */
+/* popup */
 .msg-popup-wrap {
   position: fixed;
   left: 0;
@@ -991,7 +967,7 @@ img {
   max-width: 140px;
 }
 
-/* effec */
+/* effect */
 .scEvt {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;

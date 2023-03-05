@@ -86,7 +86,7 @@ var UI = {
                 const scTop = $(this).scrollTop();
 
                 // 헤더고정
-                if(scTop >= 20 ){
+                if(scTop >= 10 ){
                     UI.selector.$header.addClass('fixed');
                 } else {
                     UI.selector.$header.removeClass('fixed');
@@ -174,7 +174,6 @@ var UI = {
                 const popView = 'popView' ;
                 navigator.clipboard.writeText(emailText)
                     .then(() => {
-                        console.log('oh');
                         //popup.classList.add(popView);
                         popup.style.cssText  = 'display: block;';
                 })
@@ -215,12 +214,10 @@ var UI = {
                 if (isChecked) {
                     $('html').attr({'data-theme': 'dark'});
                     $mode.addClass('on');
-                    //$logo.css({'background':'url("../assets/img/jlogo-w.svg") center no-repeat'});
                     body.addClass('dark');
                 } else {
                     $('html').attr({'data-theme': 'light'});
                     $mode.removeClass('on');
-                    //$logo.css({'background':'url("../assets/img/jlogo.svg") center no-repeat'});
                     body.removeClass('dark');
                 }
             });
