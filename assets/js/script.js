@@ -172,6 +172,7 @@ var UI = {
 
             function copyToClipBoard(){
                 const popView = 'popView' ;
+
                 navigator.clipboard.writeText(emailText)
                     .then(() => {
                         //popup.classList.add(popView);
